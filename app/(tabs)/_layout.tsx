@@ -1,37 +1,58 @@
+import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Tabs } from 'expo-router';
 import React from 'react';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const light = useThemeColor({}, 'primary'); 
+  const dark = useThemeColor({}, 'primary'); 
+  const bg = useThemeColor({}, 'background'); 
+
 
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    <>
+      <Tabs
+        screenOptions={{
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarActiveTintColor: light,
+          tabBarInactiveTintColor: dark,
+          tabBarStyle: {
+            height: 60,
+          },
+        }}>
+
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'Home',
+            tabBarIcon: ({ focused }) => (
+              <TabBarIcon
+                icon="book"
+                name="Discover"
+                focused={focused}
+              />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="library"
+          options={{
+            title: "Library",
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <TabBarIcon
+                icon="library"
+                name="Library"
+                focused={focused}
+              />
+            ),
+          }}
+        />
+
+
+      </Tabs>
+    </>
   );
 }

@@ -1,6 +1,10 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "module": "es6",
+    "target": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "strict": true,
     "paths": {
       "@/*": [
@@ -12,6 +16,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "app-env.d.ts",
+    "expo-env.d.ts",
   ]
 }
