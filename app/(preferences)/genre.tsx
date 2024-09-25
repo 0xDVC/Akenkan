@@ -40,7 +40,7 @@ const genre = () => {
       <View className="justify-around h-full bg-white dark:bg-slate-700">
         <View className="">
           <View className="justify-center p-5 gap-5 flex-row">
-            <View className="rounded-full w-10 h-2 bg-amber-500"/>
+            <View className="rounded-full w-10 h-2 bg-primary"/>
             <Link href={"level"} asChild>
               <TouchableOpacity className="rounded-full w-10 h-2 bg-gray-100"></TouchableOpacity>
             </Link>

@@ -35,8 +35,8 @@ const level = () => {
       <View className="justify-between h-full">
         <View className="gap-5">
           <View className="justify-center  p-5 gap-5 flex-row">
-            <View className="rounded-full w-10 h-2  bg-amber-500"></View>
-            <View className="rounded-full w-10 h-2  bg-amber-500"></View>
+            <View className="rounded-full w-10 h-2  bg-primary"></View>
+            <View className="rounded-full w-10 h-2  bg-primary"></View>
             <View className="rounded-full w-10 h-2  bg-gray-100 shadow"></View>
           </View>
           <View className="gap-2">
@@ -50,11 +50,11 @@ const level = () => {
               <View className="px-2">
                 <HciText type="title" className="text-lg text-center">
                   How fast would you like the
-                  <Text className="text-amber-500"> HCI narator </Text> to read
+                  <Text className="text-primary"> HCI narator </Text> to read
                   a book
                 </HciText>
                 <View className="flex-row gap-2 items-center self-center ">
-                  <Ionicons name="settings" color={ '#f59e0b'}/>
+                  <Ionicons name="settings" color={"#a3633a"} />
                   <HciText type="title" className=" text-center text-sm">
                     You can change this anytime from settings
                   </HciText>
