@@ -1,4 +1,4 @@
-<img src="assets/images/Akenkan_logo.png" alt="Akenkan Logo" width="500" height="200" style="display: block; margin: auto;"> 
+<img src="assets/images/icon.png" alt="Akenkan Logo" width="250" height="250" style="display: block; margin: auto;"> 
 
 
 # The Akenkan App 👋

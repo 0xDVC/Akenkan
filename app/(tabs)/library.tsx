@@ -29,15 +29,14 @@ export default function Library() {
                     </View>
 
                     <View className="w-1/5 h-1 bg-primary mt-2 pb-1 rounded-sm mb-8" />
+                    
                     <SearchBar
                         placeholder="Search for your bookmarks or downloads"
-                        onSearch={handleSearch}
-                        renderItem={(item) => (
-                            <View>
-
-                            </View>
-                        )}
+                        // onSearch={handleSearch}
                     />
+
+                    
+
                 </View>
             </ScrollView>
         </>

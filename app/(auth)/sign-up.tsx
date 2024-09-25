@@ -4,7 +4,7 @@ import FormField from "@/components/FormField";
 import RadioButton from "@/components/button/RadioButton";
 import Button from "@/components/button/Button";
 import { validateEmail, validatePhoneNumber, validatePassword } from '@/lib/util/helper';
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import SocialLoginButton from '@/components/button/SocialLoginButton';
 import { FontAwesome } from '@expo/vector-icons';
 
@@ -35,40 +35,42 @@ export default function SignUp() {
 
         // if (isEmailInput) {
         //     if (!validateEmail(email)) {
-        //         showModal('Please enter a valid email address.', 'error');
+        //         // showModal('Please enter a valid email address.', 'error');
         //         return;
         //     }
         // } else if (isPhoneInput) {
         //     if (!validatePhoneNumber(phoneNumber)) {
-        //         showModal('Please enter a valid phone number.', 'error');
+        //         // showModal('Please enter a valid phone number.', 'error');
         //         return;
         //     }
         // } else {
-        //     showModal('Please enter a valid email address or phone number.', 'error');
+        //     // showModal('Please enter a valid email address or phone number.', 'error');
         //     return;
         // }
 
         // if (!validatePassword(password)) {
-        //     showModal('Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.', 'error');
+        //     // showModal('Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.', 'error');
         //     return;
         // }
 
         // if (password !== confirmPassword) {
-        //     showModal('Passwords do not match. Please make sure both passwords match.', 'error');
+        //     // showModal('Passwords do not match. Please make sure both passwords match.', 'error');
         //     return;
         // }
 
         // showModal('Sign up successful!', 'success');
+
+        router.push('/verify')
+
+        
     };
 
 
     const handleGoogleLogin = () => {
-        // Handle Google login logic
         console.log('Google login pressed');
     };
 
     const handleAppleLogin = () => {
-        // Handle Apple login logic
         console.log('Apple login pressed');
     };
 
