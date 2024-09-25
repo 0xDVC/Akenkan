@@ -11,21 +11,22 @@ interface TabBarIconProps {
 }
 
 export function TabBarIcon({ icon, name, focused }: TabBarIconProps) {
-  const color = useThemeColor({}, 'primary'); 
+  const activeColor = useThemeColor({}, 'primary'); 
+  const inactiveColor = useThemeColor({}, 'primary'); 
+
+  const color = focused ? activeColor : inactiveColor; 
 
   return (
-      <View className="items-center justify-center">
-        <Ionicons
-          name={icon}
-          size={28}
-          color={color}
-          className="mb-1"
-        />
-
-        <Text className={`text-sm text-center ${focused ? 'font-sbld' : 'font-sreg'}`} style={{ color }}>
-          {name}
-        </Text>
-        
-      </View>
+    <View className="items-center justify-center">
+      <Ionicons
+        name={icon}
+        size={28}
+        color={color}
+        className="mb-1"
+      />
+      <Text className={`text-center ${focused ? 'font-sblk' : 'font-sreg'}`} style={{ color }}>
+        {name}
+      </Text>
+    </View>
   );
 }

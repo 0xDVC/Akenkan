@@ -3,12 +3,9 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { useThemeColor } from '@/hooks/useThemeColor';
 
-
 export default function TabLayout() {
-  const light = useThemeColor({}, 'primary'); 
-  const dark = useThemeColor({}, 'primary'); 
-  const bg = useThemeColor({}, 'background'); 
-
+  const activeColor = useThemeColor({}, 'primary'); // Color for active tab
+  const inactiveColor = useThemeColor({}, 'text'); // Color for inactive tab
 
   return (
     <>
@@ -16,13 +13,13 @@ export default function TabLayout() {
         screenOptions={{
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarActiveTintColor: light,
-          tabBarInactiveTintColor: dark,
+          tabBarActiveTintColor: activeColor, // Set active tab color
+          tabBarInactiveTintColor: inactiveColor, // Set inactive tab color
           tabBarStyle: {
             height: 60,
           },
         }}>
-
+        
         <Tabs.Screen
           name="index"
           options={{
@@ -50,8 +47,6 @@ export default function TabLayout() {
             ),
           }}
         />
-
-
       </Tabs>
     </>
   );
