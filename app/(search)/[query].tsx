@@ -31,7 +31,7 @@ export default function SearchQueryPage() {
 
   return (
     <View className="flex-1 p-4">
-      <Text className="text-lg font-bold">Search Results for "{searchQuery}"</Text>
+      <Text className="text-lg font-bold">Search Results for  "{searchQuery}"</Text>
 
       {results.length > 0 ? (
         <FlatList

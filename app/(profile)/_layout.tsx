@@ -1,18 +1,16 @@
-import React from 'react';
+import React from "react";
 import { Stack } from "expo-router";
 
-
-export default function ProfileLayout() {
-    return (
-        <Stack>
-
-            <Stack.Screen
-                name="profile-info"
-                options={{
-                    headerShown: false
-                }}
-            />
-
-        </Stack>
-    );
+export default function AuthLayout() {
+  return (
+    <Stack screenOptions={{headerShown:false}}>
+      
+      <Stack.Screen
+        name="settings"
+        options={{
+          headerShown: false,
+        }}
+      />
+    </Stack>
+  );
 }

@@ -13,32 +13,28 @@ export default function Library() {
     };
 
     return (
-        <>
-            <ScrollView className="flex-1 bg-background-light">
-                <View className="w-full px-4 flex">
-                    <View className='flex-row justify-between items-center'>
+      <>
+        <ScrollView className="flex-1 bg-background-light">
+          <View className="w-full px-4 flex">
+            <View className="flex-row justify-between items-center">
+              <Text className="font-areg  text-center text-4xl pt-11">
+                Library
+              </Text>
+              <TouchableOpacity onPress={() => console.log("Button tapped")}>
+                <Link className="pt-10" href="settings">
+                  <Ionicons name="settings-outline" size={40} color="#a3633a" />
+                </Link>
+              </TouchableOpacity>
+            </View>
 
-                        <Text className="font-areg text-center text-4xl pt-11">Library</Text>
-                            <TouchableOpacity onPress={() => console.log('Button tapped')}>
-                                <Link className='pt-10' href="/profile-info">
-                                    <Ionicons name="person-circle" size={45} color="" />
-                                </Link>
+            <View className="w-1/5 h-1 bg-primary mt-2 pb-1 rounded-sm mb-8" />
 
-                            </TouchableOpacity>
-
-                    </View>
-
-                    <View className="w-1/5 h-1 bg-primary mt-2 pb-1 rounded-sm mb-8" />
-                    
-                    <SearchBar
-                        placeholder="Search for your bookmarks or downloads"
-                        // onSearch={handleSearch}
-                    />
-
-                    
-
-                </View>
-            </ScrollView>
-        </>
+            <SearchBar
+              placeholder="Search for your bookmarks or downloads"
+              // onSearch={handleSearch}
+            />
+          </View>
+        </ScrollView>
+      </>
     );
 }

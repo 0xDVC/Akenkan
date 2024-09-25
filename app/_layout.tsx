@@ -68,19 +68,21 @@ export default function RootLayout() {
           backgroundColor={statusBarColor}
         />
 
-        <Stack   screenOptions={{
+        <Stack
+          screenOptions={{
             headerShown: false,
-            animation: "ios"}}>
-                    <Stack.Screen name="(onboarding)/index" />
+            animation: "ios",
+          }}
+        >
+          <Stack.Screen name="(onboarding)/index" />
 
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-
+          <Stack.Screen name="(profile)" options={{ headerShown: false }} />
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
           <Stack.Screen
             name="(search)/[query]"
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="(profile)" options={{ headerShown: false }} />
         </Stack>
       </SafeAreaView>
     </ThemeProvider>
