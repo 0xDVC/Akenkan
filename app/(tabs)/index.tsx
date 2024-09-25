@@ -1,28 +1,84 @@
 import SearchBar from "@/components/SearchBar";
-import { View, Text, ScrollView } from "react-native";
-import { router } from 'expo-router';
+import { View, Text, ScrollView, ActivityIndicator, FlatList, Image } from "react-native";
+import BookCard from "@/components/Bookcard";
+import useBooksByCategory from "@/hooks/useBooksByCategory";
+import { useState } from "react";
+import icon from '@/assets/images/icon.png'; // Adjust the path as necessary
 
 export default function HomeScreen() {
-  const handleSearch = (search: string) => {
-    // This function can be used to filter or fetch results based on the search input
-    // For now, it returns an empty array to satisfy the expected return type
-    return []; // Replace with actual search logic
+  const [category, setCategory] = useState<string>("fiction"); // Default category
+  const { books, loading, error } = useBooksByCategory(category); // Fetch books by category
+
+  const handleSearch = (query: string) => {
+    setCategory(query); // Update the category based on search
   };
 
   return (
     <>
       <ScrollView className="flex-1 bg-background-light">
         <View className="w-full px-4 flex items-start justify-start">
-          <Text className="font-areg text-4xl text-left pt-11">Discover</Text>
+          {/* <Text className="font-amed text-4xl text-left pt-11">Discover</Text> */}
+
+          <View className='flex-row w-full justify-between items-center'>
+            <Text className="font-amed text-center text-4xl pt-11">Discover</Text>
+            <View className='pt-10'>
+              <Image
+                source={icon} // Use the imported image
+                className="w-14 h-14" // Tailwind classes for width and height
+              />
+            </View>
+          </View>
           <View className="w-1/5 h-1 bg-primary mt-2 pb-1 rounded-sm mb-8" />
           <SearchBar
-            placeholder="Type title, author or keyword"
-            onSearch={handleSearch} // Pass the handleSearch function
-            renderItem={(item) => (
-              <View>
-                {/* Render your search result item here */}
-              </View>
+            placeholder="Type category to search"
+          // onSearch={handleSearch} // Pass the handleSearch function
+          />
+
+          <Text className="font-amed text-2xl text-left pt-7">Daily Picks</Text>
+          <Text className="font-areg text-base text-left">Books Selected at Random</Text>
+
+          {loading && <ActivityIndicator size="large" color="#A3633A" />}
+          {error && <Text>{error}</Text>}
+
+          <FlatList
+            data={books}
+            keyExtractor={(item) => item.title}
+            renderItem={({ item }) => (
+              <BookCard
+                thumbnail={item.imageLinks?.thumbnail || ''}
+                title={item.title}
+                author={item.authors?.join(', ') || 'Unknown Author'}
+                genre={item.categories?.join(', ') || 'Unknown Genre'}
+              />
             )}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{ paddingVertical: 10 }}
+          />
+
+
+
+
+          <Text className="font-amed text-2xl text-left pt-7">Collections for You</Text>
+          <Text className="font-areg text-base text-left">Books Selected based on your Preferrences</Text>
+
+          {loading && <ActivityIndicator size="large" color="#A3633A" />}
+          {error && <Text>{error}</Text>}
+
+          <FlatList
+            data={books}
+            keyExtractor={(item) => item.title}
+            renderItem={({ item }) => (
+              <BookCard
+                thumbnail={item.imageLinks?.thumbnail || ''}
+                title={item.title}
+                author={item.authors?.join(', ') || 'Unknown Author'}
+                genre={item.categories?.join(', ') || 'Unknown Genre'}
+              />
+            )}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{ paddingVertical: 10 }}
           />
 
 

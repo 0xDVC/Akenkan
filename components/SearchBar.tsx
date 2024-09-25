@@ -13,7 +13,7 @@ export default function SearchBar({ placeholder, otherStyle }: SearchBarProps) {
 
   const handleSearchSubmit = () => {
     if (search) {
-      router.push({ pathname: '/search', params: { searchQuery: search } });
+    //   router.push({ pathname: '/search', params: { searchQuery: search } });
     }
   };
 
