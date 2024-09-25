@@ -20,7 +20,7 @@ export default function Library() {
 
                         <Text className="font-areg text-center text-4xl pt-11">Library</Text>
                             <TouchableOpacity onPress={() => console.log('Button tapped')}>
-                                <Link className='pt-10' href="/sign-up">
+                                <Link className='pt-10' href="/profile-info">
                                     <Ionicons name="person-circle" size={45} color="" />
                                 </Link>
 

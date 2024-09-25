@@ -3,7 +3,7 @@ import { View, Text, ScrollView, SafeAreaView, Platform } from 'react-native';
 import FormField from "@/components/FormField";
 import Button from "@/components/button/Button";
 import { validateEmail, validatePhoneNumber } from '@/lib/util/helper';
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import Checkbox from "@/components/Checkbox";
 import SocialLoginButton from "@/components/button/SocialLoginButton";
 import { FontAwesome } from '@expo/vector-icons';
@@ -67,6 +67,7 @@ export default function SignIn() {
         setIsSubmitting(true);
         handleSignIn();
         setIsSubmitting(false);
+        router.push('genre')
     };
 
     const handleGoogleLogin = () => {
