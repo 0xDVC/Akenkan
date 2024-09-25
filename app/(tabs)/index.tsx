@@ -44,12 +44,13 @@ export default function HomeScreen() {
             data={books}
             keyExtractor={(item) => item.title}
             renderItem={({ item }) => (
-              <BookCard
+                <BookCard
                 thumbnail={item.imageLinks?.thumbnail || ''}
                 title={item.title}
                 author={item.authors?.join(', ') || 'Unknown Author'}
                 genre={item.categories?.join(', ') || 'Unknown Genre'}
               />
+              
             )}
             horizontal
             showsHorizontalScrollIndicator={false}
