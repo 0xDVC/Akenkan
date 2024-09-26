@@ -11,7 +11,7 @@ interface BookCardProps {
 export default function BookCard({ thumbnail, title, author, genre }: BookCardProps) {
     return (
       <TouchableOpacity activeOpacity={0.5}>
-        <View className="w-60 h-[460] mr-3 bg-white dark:bg-slate-800 rounded-lg border border-[#b4541329] shadow-md overflow-hidden">
+        <View className="w-60 h-[460] mr-3 bg-white dark:bg-slate-800 rounded-r-2xl rounded-l-none border-l-4 border-l-[#b45413] shadow overflow-hidden">
           <View className="flex-3 h-3/4 object-cover">
             <Image source={{ uri: thumbnail }} className="w-full h-full" />
           </View>

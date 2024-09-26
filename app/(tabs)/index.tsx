@@ -16,7 +16,7 @@ export default function HomeScreen() {
 
   return (
     <>
-      <ScrollView className="flex-1 bg-background-light dark:bg-slate-900">
+      <ScrollView className="flex-1 bg-amber-50 dark:bg-slate-900">
         <View className="w-full px-4 flex items-start justify-start">
           {/* <Text className="dark:text-slate-50 font-amed text-4xl text-left pt-11">Discover</Text> */}
 

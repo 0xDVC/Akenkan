@@ -75,7 +75,7 @@ const Swiper2: React.FC = () => {
 
 
     return (
-        <View className="flex-1 bg-white dark:bg-background-dark">
+        <View className="flex-1 bg-amber-50 dark:bg-background-dark">
             <ScrollView
                 ref={scrollViewRef}
                 horizontal
