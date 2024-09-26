@@ -6,7 +6,7 @@
       "description": "A timeless classic that tells the story of Okonkwo, a powerful leader in an Igbo village in Nigeria, whose life unravels as he faces the impacts of colonialism and the clash between tradition and change.",
       "pageCount": 209,
       "categories": ["Fiction", "African Literature", "Cultural History"],
-      "thumbnail": "assets/images/things_fall_apart.jpg"
+      "thumbnail": "assets/images/books/things_fall_apart.png"
     },
     {
       "title": "Half of a Yellow Sun",
@@ -15,7 +15,7 @@
       "description": "Set during the Nigerian Civil War, this captivating novel explores the lives of three characters navigating the complexities of love, politics, and survival in a time of national strife. It sheds light on the human cost of conflict.",
       "pageCount": 435,
       "categories": ["Fiction", "Historical Fiction", "War"],
-      "thumbnail": "assets/images/half_of_a_yellow_sun.jpg"
+      "thumbnail": "assets/images/books/half_of_a_yellow_sun.png"
     },
     {
       "title": "Homegoing",
@@ -24,7 +24,7 @@
       "description": "A sweeping narrative that spans over 300 years, following two half-sisters from Ghana—one sold into slavery, the other marrying into wealth—and how their descendants' lives are shaped by history, race, and culture.",
       "pageCount": 320,
       "categories": ["Fiction", "Historical Fiction", "African Literature"],
-      "thumbnail": "assets/images/homegoing.jpg"
+      "thumbnail": "assets/images/books/homegoing.png"
     },
     {
       "title": "Stay With Me",
@@ -33,7 +33,7 @@
       "description": "A heart-wrenching story set in Nigeria, exploring the fragility of marriage through the eyes of a young couple desperate for children. This novel delves into themes of love, loss, and the weight of societal expectations.",
       "pageCount": 288,
       "categories": ["Fiction", "Romance", "African Literature"],
-      "thumbnail": "assets/images/stay_with_me.jpg"
+      "thumbnail": "assets/images/books/stay_with_me.png"
     },
     {
       "title": "The Beautyful Ones Are Not Yet Born",
@@ -42,7 +42,7 @@
       "description": "An insightful and deeply symbolic novel about the disillusionment of post-independence Ghana, where a civil servant struggles with the overwhelming corruption around him, while still trying to hold onto hope for a better future.",
       "pageCount": 192,
       "categories": ["Fiction", "Political Fiction", "African Literature"],
-      "thumbnail": "assets/images/the_beautyful_ones.jpg"
+      "thumbnail": "assets/images/books/the_beautyful_ones.png"
     },
     {
       "title": "Akata Witch",
@@ -51,7 +51,7 @@
       "description": "Sunny, a Nigerian-American girl, discovers she has magical powers and embarks on a dangerous journey with three friends to stop an evil sorcerer. This fantasy novel blends African folklore with contemporary issues, making it a thrilling read.",
       "pageCount": 349,
       "categories": ["Fantasy", "African Literature", "Young Adult"],
-      "thumbnail": "assets/images/akata_witch.jpg"
+      "thumbnail": "assets/images/books/akata_witch.png"
     },
     {
       "title": "We Should All Be Feminists",
@@ -60,7 +60,7 @@
       "description": "Based on Adichie’s TED Talk, this powerful essay explores what it means to be a feminist today, focusing on the challenges African women face and the global importance of gender equality. A thought-provoking and accessible read.",
       "pageCount": 64,
       "categories": ["Non-Fiction", "Gender Studies", "Self-Help"],
-      "thumbnail": "assets/images/we_should_all_be_feminists.jpg"
+      "thumbnail": "assets/images/books/we_should_all_be_feminists.png"
     },
     {
       "title": "The Girl Who Can",
@@ -69,7 +69,7 @@
       "description": "A delightful collection of short stories by one of Ghana’s foremost literary voices, exploring themes of family, gender, and the changing role of women in contemporary African society.",
       "pageCount": 120,
       "categories": ["Fiction", "Short Stories", "African Literature"],
-      "thumbnail": "assets/images/the_girl_who_can.jpg"
+      "thumbnail": "assets/images/books/the_girl_who_can.png"
     },
     {
       "title": "Born on a Tuesday",
@@ -78,7 +78,7 @@
       "description": "A coming-of-age story set in Northern Nigeria, following the life of a young boy, Dantala, who becomes involved with an Islamist sect. The novel provides deep insights into faith, politics, and the complexities of modern Nigeria.",
       "pageCount": 258,
       "categories": ["Fiction", "Political Fiction", "African Literature"],
-      "thumbnail": "assets/images/born_on_a_tuesday.jpg"
+      "thumbnail": "assets/images/books/born_on_a_tuesday.png"
     },
     {
       "title": "Americanah",
@@ -87,7 +87,7 @@
       "description": "The story of a young Nigerian woman who moves to America, Americanah deftly explores themes of race, immigration, and love. It provides a fresh perspective on the experiences of Africans in the diaspora and the contrasts between two worlds.",
       "pageCount": 477,
       "categories": ["Fiction", "Romance", "Cultural Identity"],
-      "thumbnail": "assets/images/americanah.jpg"
+      "thumbnail": "assets/images/books/americanah.png"
     },
     {
       "title": "The Shadow King",
@@ -96,7 +96,7 @@
       "description": "Set during Italy’s invasion of Ethiopia, this gripping novel focuses on the forgotten women soldiers who fought in the war. It is a powerful testament to the resilience of the human spirit and the unheralded role of women in African history.",
       "pageCount": 448,
       "categories": ["Historical Fiction", "African Literature", "War"],
-      "thumbnail": "assets/images/the_shadow_king.jpg"
+      "thumbnail": "assets/images/books/the_shadow_king.png"
     },
     {
       "title": "Long Walk to Freedom",
@@ -105,7 +105,7 @@
       "description": "The riveting memoir of one of the most iconic figures of the 20th century, Nelson Mandela, detailing his journey from rural South Africa to becoming the country's first Black president and an enduring symbol of the fight for justice and equality.",
       "pageCount": 656,
       "categories": ["Non-Fiction", "Autobiography", "African History"],
-      "thumbnail": "assets/images/long_walk_to_freedom.jpg"
+      "thumbnail": "assets/images/books/long_walk_to_freedom.png"
     },
     {
       "title": "The Fishermen",
@@ -114,7 +114,7 @@
       "description": "Set in Nigeria, this novel tells the haunting story of four brothers who are drawn into a dark prophecy. It explores themes of destiny, brotherhood, and the far-reaching consequences of choices in a tightly knit family.",
       "pageCount": 304,
       "categories": ["Fiction", "African Literature", "Family"],
-      "thumbnail": "assets/images/the_fishermen.jpg"
+      "thumbnail": "assets/images/books/the_fishermen.png"
     },
     {
       "title": "Sankofa",
@@ -123,7 +123,7 @@
       "description": "A thought-provoking story about Anna, a woman of mixed race, who embarks on a journey to find her African father. This novel explores questions of identity, belonging, and self-discovery as Anna reconciles her two cultural heritages.",
       "pageCount": 240,
       "categories": ["Fiction", "Cultural Identity", "African Literature"],
-      "thumbnail": "assets/images/sankofa.jpg"
+      "thumbnail": "assets/images/books/sankofa.png"
     },
     {
       "title": "The Famished Road",
