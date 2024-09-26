@@ -24,7 +24,7 @@ export function TabBarIcon({ icon, name, focused }: TabBarIconProps) {
         color={color}
         className="mb-1"
       />
-      <Text className={`text-center ${focused ? 'font-sblk' : 'font-sreg'}`} style={{ color }}>
+      <Text className={`text-center text-lg ${focused ? 'font-sblk' : 'font-smed'}`} style={{ color }}>
         {name}
       </Text>
     </View>

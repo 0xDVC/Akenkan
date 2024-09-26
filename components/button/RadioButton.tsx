@@ -26,7 +26,7 @@ export default function RadioButton ({ label, value, selected, handleRadioButton
             >
                 {selected && <View className="w-3 h-3 rounded-full" style={{ backgroundColor: color }} />}
             </View>
-            <Text className="font-sreg text-base text-black text-center">{label}</Text>
+            <Text className="font-sreg text-lg text-black text-center">{label}</Text>
         </TouchableOpacity>
     );
 };

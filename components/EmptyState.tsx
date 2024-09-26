@@ -13,10 +13,10 @@ export default function EmptyState({ title, subtitle, icon }: EmptyStateProps) {
     const color = useThemeColor({}, 'primary');
 
     return (
-        <View className="justify-center items-center px-4">
-            <Ionicons name={icon} size={48} />
-            <Text className="font-sreg text-sm text-gray-100">{title}</Text>
-            <Text className="font-sblk text-xl text-center" style={{ color }}>{subtitle}</Text>
+        <View className="inline-flexjustify-center items-center px-4">
+            <Ionicons name={icon} style={{color, opacity: 0.5}} size={60} />
+            <Text className="font-sreg p-8 text-xl text-center text-opacity-20 text-primary-light">{title}</Text>
+            <Text className="font-smed text-2xl text-center text-opacity-15 text-primary-light" >{subtitle}</Text>
         </View>
     );
 }

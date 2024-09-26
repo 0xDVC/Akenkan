@@ -1,14 +1,24 @@
 import React, { useState } from 'react'
 import OTPEntry from "@/components/OTPEntry";
-import { SafeAreaView, View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import CountdownTimer from "@/components/Countdown";
-import Button from "@/components/button/Button";
+import Button from "@/components/onboarding/Button";
+import { router } from 'expo-router';
+
 
 export default function Verify() {
     const [otp, setOtp] = useState('');
-    const value = '+233-509894026';
+    const value = '050-989-4026';
+
+    const handleVerification = () =>  {
+        if(otp.length === 6)  {
+            router.push('/(tabs)')
+        }
+    };
+
     return (
         // <SafeAreaView className="h-full" style={{ backgroundColor: Colors.light.background }}>
+        <>   
             <ScrollView className='bg-background-light'>
                 <View className="w-full px-4 justify-center h-full">
                     <Text className="font-abld text-5xl text-center mt-[70px]">We just sent you a 6-digit code</Text>
@@ -29,14 +39,24 @@ export default function Verify() {
                             <Text className='font-sreg text-primary text-lg text-center'>Didn't receive the code?</Text>
                         </TouchableOpacity>
                     </View>
+
+                    <Button 
+                        className='bg-primary mt-10 text-lg'
+                        onPress={handleVerification}
+                    >
+                     Verify   
+                    </Button>
                 </View>
-
-
-
-
             </ScrollView>
 
+            {/* <FeedbackModal
+            visible={modalVisible}
+            message={modalMessage}
+            type={modalType}
+            onClose={() => setModalVisible(false)}
+          /> */}
 
+        </> 
         // </SafeAreaView>
 
     );

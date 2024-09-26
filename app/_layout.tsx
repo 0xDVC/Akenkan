@@ -55,7 +55,7 @@ export default function RootLayout() {
   return (
     <SafeAreaView style={{
       flex: 1,
-      backgroundColor: statusBarColor,
+      // backgroundColor: statusBarColor,
     }}>
 
       <StatusBar
@@ -65,9 +65,14 @@ export default function RootLayout() {
       
       <Stack>
         <Stack.Screen 
+          name="(onboarding)/index"
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
           name="(tabs)"
           options={{ headerShown: false }} 
         />
+     
         
         <Stack.Screen 
           name="(auth)"

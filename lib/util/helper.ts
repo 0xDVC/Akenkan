@@ -3,6 +3,11 @@ export const validateEmail = (email: string): boolean => {
     return emailPattern.test(email);
 };
 
+export const validateName = (name: string): boolean => {
+    const namePattern = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/; // Allows letters and spaces for full names
+    return namePattern.test(name);
+};
+
 export const validatePhoneNumber = (phoneNumber: string): boolean => {
     const phonePattern = /^(020|050|053|059|054|024|025|027|026|057|056)\d{7}$/;
     return phonePattern.test(phoneNumber);

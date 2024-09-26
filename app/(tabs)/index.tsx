@@ -1,9 +1,11 @@
 import SearchBar from "@/components/SearchBar";
-import { View, Text, ScrollView, ActivityIndicator, FlatList, Image } from "react-native";
+import { View, Text, ScrollView, ActivityIndicator, FlatList, Image, TouchableOpacity } from "react-native";
 import BookCard from "@/components/Bookcard";
 import useBooksByCategory from "@/hooks/useBooksByCategory";
 import { useState } from "react";
 import icon from '@/assets/images/icon.png'; // Adjust the path as necessary
+import { Link } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function HomeScreen() {
   const [category, setCategory] = useState<string>("fiction"); // Default category
@@ -21,12 +23,17 @@ export default function HomeScreen() {
 
           <View className='flex-row w-full justify-between items-center'>
             <Text className="font-amed text-center text-4xl pt-11">Discover</Text>
-            <View className='pt-10'>
+            <TouchableOpacity onPress={() => console.log('Button tapped')}>
+              <Link className='pt-10' href="/sign-in">
+                <Ionicons name="person-circle" size={45} color="" />
+              </Link>
+            </TouchableOpacity>
+            {/* <View className='pt-10'>
               <Image
                 source={icon} // Use the imported image
                 className="w-14 h-14" // Tailwind classes for width and height
               />
-            </View>
+            </View> */}
           </View>
           <View className="w-1/5 h-1 bg-primary mt-2 pb-1 rounded-sm mb-8" />
           <SearchBar
@@ -44,13 +51,13 @@ export default function HomeScreen() {
             data={books}
             keyExtractor={(item) => item.title}
             renderItem={({ item }) => (
-                <BookCard
+              <BookCard
                 thumbnail={item.imageLinks?.thumbnail || ''}
                 title={item.title}
                 author={item.authors?.join(', ') || 'Unknown Author'}
                 genre={item.categories?.join(', ') || 'Unknown Genre'}
               />
-              
+
             )}
             horizontal
             showsHorizontalScrollIndicator={false}

@@ -16,7 +16,7 @@ export default function TabLayout() {
           tabBarActiveTintColor: activeColor, // Set active tab color
           tabBarInactiveTintColor: inactiveColor, // Set inactive tab color
           tabBarStyle: {
-            height: 60,
+            height: 90,
           },
         }}>
         

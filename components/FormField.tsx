@@ -34,7 +34,7 @@ export default function FormField({ title, icon, placeholder, otherStyles, handl
                     />
                 )}
                 <TextInput
-                    className="flex-1 ml-2 font-sreg text-base text-black"
+                    className="flex-1 ml-2 font-sreg text-lg text-black"
                     placeholder={placeholder}
                     placeholderTextColor="gray"
                     onChangeText={handleChangeText}

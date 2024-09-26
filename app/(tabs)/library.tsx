@@ -3,6 +3,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import EmptyState from '@/components/EmptyState';
+import { icon } from '@/assets/images/icon.png';
 
 
 export default function Library() {
@@ -17,13 +19,11 @@ export default function Library() {
             <ScrollView className="flex-1 bg-background-light">
                 <View className="w-full px-4 flex">
                     <View className='flex-row justify-between items-center'>
-
-                        <Text className="font-areg text-center text-4xl pt-11">Library</Text>
+                        <Text className="font-amed text-center text-4xl pt-11">Library</Text>
                             <TouchableOpacity onPress={() => console.log('Button tapped')}>
-                                <Link className='pt-10' href="/sign-up">
-                                    <Ionicons name="person-circle" size={45} color="" />
+                                <Link className='pt-10' href="/profile-info">
+                                    <Ionicons name="settings" size={33} color="" />
                                 </Link>
-
                             </TouchableOpacity>
 
                     </View>
@@ -34,7 +34,13 @@ export default function Library() {
                         placeholder="Search for your bookmarks or downloads"
                         // onSearch={handleSearch}
                     />
-
+                    <View className='flex-1 justify-center items-center pt-32'>
+                        <EmptyState
+                            title='Oops!'
+                            subtitle='Nothing to see here'
+                            icon='search'
+                        />
+                    </View>
                     
 
                 </View>

@@ -17,7 +17,7 @@ export default function SocialLoginButton ({ provider, onPress }: SocialLoginBut
             className="w-16 h-16 bg-white rounded-full items-center justify-center shadow-md"
             onPress={onPress}
         >
-            <Ionicons name={iconName} size={50} color={color} />
+            <Ionicons name={iconName} size={60} color={color} />
         </TouchableOpacity>
     );
 };
