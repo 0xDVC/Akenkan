@@ -20,7 +20,7 @@ export default function FormField({ title, icon, placeholder, otherStyles, handl
     return (
         <View className={`relative space-y-2 ${otherStyles}`}>
             {/* {title && (
-                <Text className="text-gray-650 font-sreg">
+                <Text className="dark:text-slate-50 text-gray-650 font-sreg">
                     {title}
                 </Text>
             )} */}
@@ -34,7 +34,7 @@ export default function FormField({ title, icon, placeholder, otherStyles, handl
                     />
                 )}
                 <TextInput
-                    className="flex-1 ml-2 font-sreg text-lg text-black"
+                    className="flex-1 ml-2 font-sreg text-lg text-slate-900 dark:text-slate-50"
                     placeholder={placeholder}
                     placeholderTextColor="gray"
                     onChangeText={handleChangeText}

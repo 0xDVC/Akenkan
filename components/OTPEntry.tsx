@@ -39,7 +39,7 @@ const OTPEntry: React.FC<OTPInputProps> = ({ value, onChange }) => {
                     <View className="w-12 h-12 border-2 border-gray-600 rounded-lg justify-center items-center">
                         <TextInput
                             ref={(ref) => (inputs.current[index] = ref)}
-                            className="text-center text-lg font-sblk"
+                            className="text-center text-lg font-sblk dark:text-slate-100"
                             keyboardType="numeric"
                             maxLength={1}
                             value={value[index] || ''}

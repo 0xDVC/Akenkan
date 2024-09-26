@@ -29,7 +29,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ visible=true, message, ty
                                         {/* {type === 'success' ? 'Success' : 'Error'} */}
                                         <Feather name={type==='success'?'check-circle':(type==='error'?'alert-circle':'trash')}  size={40}/>
                                     </Text>
-                                    <Text className="font-sreg text-lg text-center mb-5">{message}</Text>
+                                    <Text className="font-sreg text-lg text-center mb-5 text-slate-900 dark:text-white">{message}</Text>
                                     <TouchableOpacity activeOpacity={0.7}
                                         className="bg-primary py-1 px-4 rounded-lg active:scale-95 transition-all"
                                         onPress={onClose}

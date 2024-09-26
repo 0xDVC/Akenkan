@@ -23,16 +23,19 @@ export default function SearchBar({ placeholder, otherStyle }: SearchBarProps) {
 
   return (
     <View className={`w-full ${otherStyle}`}>
-      <View className="w-full flex-row items-center border border-gray-200 rounded-lg">
+      <View className=" flex-row justify-center dark:bg-slate-900 rounded-full px-4 items-center border border-primary dark:border-slate-700">
         <Ionicons name="search" size={24} color="gray" className="ml-2" />
         <TextInput
-          className="flex-1 py-2 px-4 text-base"
+          className="h-10  text-center   text-base "
           placeholder={placeholder}
           value={search}
           onChangeText={setSearch}
           onSubmitEditing={handleSearchSubmit} // Trigger search on submit
           autoCorrect={false}
+          onFocus={() => router.push("/search")}
+          placeholderTextColor={"#64748b"}
         />
+
         {search.length > 0 && (
           <TouchableOpacity onPress={clearSearch} className="mr-2">
             <Ionicons name="close-circle" size={20} color="gray" />

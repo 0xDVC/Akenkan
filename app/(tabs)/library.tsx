@@ -4,7 +4,7 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import EmptyState from '@/components/EmptyState';
-import { icon } from '@/assets/images/icon.png';
+// import { icon } from '@/assets/images/icon.png';
 
 
 export default function Library() {
@@ -15,36 +15,35 @@ export default function Library() {
     };
 
     return (
-        <>
-            <ScrollView className="flex-1 bg-background-light">
-                <View className="w-full px-4 flex">
-                    <View className='flex-row justify-between items-center'>
-                        <Text className="font-amed text-center text-4xl pt-11">Library</Text>
-                            <TouchableOpacity onPress={() => console.log('Button tapped')}>
-                                <Link className='pt-10' href="/profile-info">
-                                    <Ionicons name="settings" size={33} color="" />
-                                </Link>
-                            </TouchableOpacity>
+      <>
+        <ScrollView className="flex-1 bg-background-light dark:bg-slate-900">
+          <View className="w-full px-4 flex">
+            <View className="flex-row justify-between items-center">
+              <Text className="dark:text-slate-50 font-amed text-center text-4xl pt-11">
+                Library
+              </Text>
+              <TouchableOpacity onPress={() => console.log("Button tapped")}>
+                <Link className="pt-10" href="/profile-info">
+                  <Ionicons name="settings" size={33} color="#64748b" />
+                </Link>
+              </TouchableOpacity>
+            </View>
 
-                    </View>
+            <View className="w-1/5 h-1 bg-primary mt-2 pb-1 rounded-sm mb-8" />
 
-                    <View className="w-1/5 h-1 bg-primary mt-2 pb-1 rounded-sm mb-8" />
-                    
-                    <SearchBar
-                        placeholder="Search for your bookmarks or downloads"
-                        // onSearch={handleSearch}
-                    />
-                    <View className='flex-1 justify-center items-center pt-32'>
-                        <EmptyState
-                            title='Oops!'
-                            subtitle='Nothing to see here'
-                            icon='search'
-                        />
-                    </View>
-                    
-
-                </View>
-            </ScrollView>
-        </>
+            <SearchBar
+              placeholder="Search for your bookmarks or downloads"
+              // onSearch={handleSearch}
+            />
+            <View className="flex-1 justify-center items-center pt-32">
+              <EmptyState
+                title="Oops!"
+                subtitle="Nothing to see here"
+                icon="search"
+              />
+            </View>
+          </View>
+        </ScrollView>
+      </>
     );
 }

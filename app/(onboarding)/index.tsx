@@ -63,12 +63,12 @@ const Swiper2: React.FC = () => {
                 animated: true,
             });
 
-            // router.push('')
+            router.push('/library')
         } else onSkipToSignUp();
     };
 
     const onSkipToSignUp = () => {
-        router.push("/sign-up");
+        router.replace("/sign-up");
         // completeOnboarding()
     };
 
@@ -117,7 +117,7 @@ const Swiper2: React.FC = () => {
                 </OnBoardingPage>
 
                 <OnBoardingPage onSnapTo={handlePageChange} onboardNumber={2}>
-                    <View className="px-8">
+                    <View className="px-2">
                         <Text className="text-primary text-center font-abld dark:text-gray-50 text-5xl self-center">
                         Explore a World of Stories
                         </Text>

@@ -85,87 +85,90 @@ export default function SignIn() {
     };
 
     return (
-        <>
-            <ScrollView className="bg-white dark:bg-slate-700">
-                <View className="w-full px-4 my-6 justify-center h-full">
-                    <Text
-                        className="text-center font-abld text-5xl mt-[35px]"
-                    >
-                        Sign In
-                    </Text>
-                    <Text className="font-sreg text-2xl text-center mt-4">
-                        Welcome Back!
-                    </Text>
+      <>
+        <ScrollView className="bg-background-light dark:bg-slate-900">
+          <View className="w-full px-4 my-6 justify-center h-full">
+            <Text className="dark:text-slate-50 text-center font-abld text-5xl mt-[35px]">
+              Sign In
+            </Text>
+            <Text className="dark:text-slate-200 font-sreg text-2xl text-center mt-4">
+              Welcome Back!
+            </Text>
 
-                    <FormField
-                        title="Email or Phone Number"
-                        icon="mail"
-                        value={form.email || form.phoneNumber}
-                        placeholder="Enter Email or Phone Number"
-                        handleChangeText={(text) => {
-                            if (text.includes("@")) {
-                                handleChangeText("email", text);
-                            } else {
-                                handleChangeText("phoneNumber", text);
-                            }
-                        }}
-                        otherStyles="mt-4"
-                    />
-
-                    <View className="justify-start mt-4 pl-4">
-                        <Checkbox
-                            text="Remember me"
-                            checked={isChecked}
-                            onChange={handleCheckboxChange}
-                        />
-                    </View>
-
-                    <View className="mt-10">
-                        <Button onPress={handlePress} loading={isSubmitting}>
-                            Login
-                        </Button>
-                    </View>
-                    <FontAwesome />
-                    {/* Divider with "or" */}
-                    <View className="flex-row items-center mt-10">
-                        <View className="flex-1 h-px bg-gray-500" />
-                        <Text className="mx-4 font-smed text-xl">or</Text>
-                        <View className="flex-1 h-px bg-gray-500" />
-                    </View>
-
-                    {/* Alternate login buttons */}
-                    <View className="flex-row justify-evenly mt-6">
-                        {Platform.OS === 'android' ? (
-                            <SocialLoginButton
-                                provider="google"
-                                onPress={handleGoogleLogin}
-                            />
-                        ) : (
-                            <SocialLoginButton
-                                provider="apple"
-                                onPress={handleAppleLogin}
-                            />
-                        )}
-                    </View>
-
-                    <View className="mt-16 justify-center items-center">
-                        <View className="flex-row gap-2 items-center">
-                            <Text className="text-lg font-smed"> Don't have an account?</Text>
-                            <Link href="/sign-up" asChild>
-                                <Text className="text-amber-700 text-lg font-sabld dark:text-amber-300">
-                                    Sign Up
-                                </Text>
-                            </Link>
-                        </View>
-                    </View>
-                </View>
-            </ScrollView>
-            <FeedbackModal
-                visible={modalVisible}
-                message={modalMessage}
-                type={modalType}
-                onClose={() => setModalVisible(false)}
+            <FormField
+              title="Email or Phone Number"
+              icon="mail"
+              value={form.email || form.phoneNumber}
+              placeholder="Enter Email or Phone Number"
+              handleChangeText={(text) => {
+                if (text.includes("@")) {
+                  handleChangeText("email", text);
+                } else {
+                  handleChangeText("phoneNumber", text);
+                }
+              }}
+              otherStyles="mt-4"
             />
-        </>
+
+            <View className="justify-start mt-4 pl-4">
+              <Checkbox
+                text="Remember me"
+                checked={isChecked}
+                onChange={handleCheckboxChange}
+              />
+            </View>
+
+            <View className="mt-10">
+              <Button onPress={handlePress} loading={isSubmitting}>
+                Login
+              </Button>
+            </View>
+            <FontAwesome />
+            {/* Divider with "or" */}
+            <View className="flex-row items-center mt-10">
+              <View className="flex-1 h-px bg-gray-500" />
+              <Text className="dark:text-slate-50 mx-4 font-smed text-xl">
+                or
+              </Text>
+              <View className="flex-1 h-px bg-gray-500" />
+            </View>
+
+            {/* Alternate login buttons */}
+            <View className="flex-row justify-evenly mt-6">
+              {Platform.OS === "android" ? (
+                <SocialLoginButton
+                  provider="google"
+                  onPress={handleGoogleLogin}
+                />
+              ) : (
+                <SocialLoginButton
+                  provider="apple"
+                  onPress={handleAppleLogin}
+                />
+              )}
+            </View>
+
+            <View className="mt-16 justify-center items-center">
+              <View className="flex-row gap-2 items-center">
+                <Text className="dark:text-slate-50 text-lg font-smed">
+                  {" "}
+                  Don't have an account?
+                </Text>
+                <Link href="/sign-up" asChild>
+                  <Text className="dark:text-slate-50 text-amber-700 text-lg font-sabld dark:text-amber-300">
+                    Sign Up
+                  </Text>
+                </Link>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+        <FeedbackModal
+          visible={modalVisible}
+          message={modalMessage}
+          type={modalType}
+          onClose={() => setModalVisible(false)}
+        />
+      </>
     );
 }

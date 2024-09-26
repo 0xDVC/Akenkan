@@ -83,6 +83,11 @@ export default function RootLayout() {
           options={{ headerShown: false }} 
         />
         <Stack.Screen 
+          name="(search)"
+          options={{ headerShown: false,animation:'slide_from_bottom'}} 
+        />
+
+        <Stack.Screen 
           name="(profile)"
           options={{ headerShown: false }} 
         />

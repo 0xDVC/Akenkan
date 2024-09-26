@@ -27,7 +27,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ text, checked = false, onChange, ..
             <View className={`w-5 h-5 border-2 rounded ${isChecked ? 'bg-primary' : 'bg-white'} border-gray-300 justify-center items-center`}>
                 {isChecked}
             </View>
-            <Text className="ml-2 font-sreg text-lg">{text}</Text>
+            <Text className="ml-2 font-sreg text-lg dark:text-slate-200">{text}</Text>
         </TouchableOpacity>
     );
 };

@@ -19,13 +19,13 @@ export default function Verify() {
     return (
         // <SafeAreaView className="h-full" style={{ backgroundColor: Colors.light.background }}>
         <>   
-            <ScrollView className='bg-background-light'>
+            <ScrollView className='bg-background-light dark:bg-slate-900'>
                 <View className="w-full px-4 justify-center h-full">
-                    <Text className="font-abld text-5xl text-center mt-[70px]">We just sent you a 6-digit code</Text>
+                    <Text className="dark:text-slate-50 font-abld text-5xl text-center mt-[70px]">We just sent you a 6-digit code</Text>
 
-                    <Text className="font-sreg text-xl mt-4 mb-10 text-center">
+                    <Text className="dark:text-slate-200 font-sreg text-xl mt-4 mb-10 text-center">
                         Please enter the code we've sent to{' '}
-                        <Text className="font-sreg text-md">{value}</Text>
+                        <Text className="dark:text-slate-50 font-sreg text-md">{value}</Text>
                     </Text>
 
                     <OTPEntry
